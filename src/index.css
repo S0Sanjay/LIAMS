@@ -1,19 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
 
 :root {
-  --navy: #002b5b;
-  --navy-light: #0d3d73;
-  --gold: #c5a059;
-  --gold-dark: #a8843f;
-  --green: #2e7d32;
+  --ink: #0f172a;
+  --navy: #1e3a5f;
+  --navy-light: #2563eb;
+  --blue: #2563eb;
+  --blue-soft: #dbeafe;
+  --gold: #eab308;
+  --gold-dark: #ca8a04;
+  --green: #10b981;
+  --mint: #10b981;
   --white: #ffffff;
-  --off-white: #f7f8fa;
+  --bg: #f1f5f9;
+  --off-white: #f8fafc;
+  --bg-alt: #e2e8f0;
+  --border: #cbd5e1;
   --gray-100: #eef1f5;
   --gray-300: #c5cdd8;
-  --gray-600: #5a6578;
-  --gray-800: #2d3748;
-  --shadow: 0 4px 24px rgba(0, 43, 91, 0.08);
-  --shadow-lg: 0 12px 40px rgba(0, 43, 91, 0.12);
+  --gray-600: #64748b;
+  --gray-800: #334155;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.12);
   --radius: 12px;
   --radius-sm: 8px;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -104,7 +113,7 @@ ul {
 }
 
 .section--alt {
-  background: var(--off-white);
+  background: var(--bg);
 }
 
 .section__header {
@@ -146,13 +155,25 @@ ul {
 
 .btn--primary {
   background: var(--gold);
-  color: var(--navy);
+  color: var(--ink);
   border-color: var(--gold);
 }
 
 .btn--primary:hover {
   background: var(--gold-dark);
   border-color: var(--gold-dark);
+  color: var(--ink);
+}
+
+.btn--secondary {
+  background: var(--blue);
+  color: var(--white);
+  border-color: var(--blue);
+}
+
+.btn--secondary:hover {
+  background: var(--navy-light);
+  border-color: var(--navy-light);
   color: var(--white);
 }
 

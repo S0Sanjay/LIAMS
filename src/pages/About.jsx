@@ -19,23 +19,38 @@ export default function About() {
       />
 
       <section className="section">
-        <div className="container about-split">
-          <div>
-            <span className="section__label">Vision</span>
-            <h2>Our Vision</h2>
-            <p className="lead">{vision}</p>
+        <div className="container">
+          <div className="section__header">
+            <span className="section__label">Purpose</span>
+            <h2>Vision & Mission</h2>
           </div>
-          <div className="about-symbol">
-            <img src="/logos/liams-logo-symbol.png" alt="" aria-hidden="true" />
+          <div className="vision-mission grid grid--2">
+            <article className="intro-card">
+              <h3>Our Vision</h3>
+              <p>{vision}</p>
+            </article>
+            <article className="intro-card intro-card--gold">
+              <h3>Our Mission</h3>
+              <p>{mission}</p>
+            </article>
           </div>
         </div>
       </section>
 
       <section className="section section--alt">
-        <div className="container">
-          <span className="section__label">Mission</span>
-          <h2>Our Mission</h2>
-          <p className="lead">{mission}</p>
+        <div className="container about-split">
+          <div>
+            <span className="section__label">Institute</span>
+            <h2>Who We Are</h2>
+            <p className="lead">
+              LIAMS stands at the intersection of tradition and innovation — advancing
+              multidisciplinary education, research excellence, and industry collaboration under
+              internationally recognized quality standards.
+            </p>
+          </div>
+          <div className="about-symbol">
+            <img src="/logos/liams-logo-symbol.png" alt="" aria-hidden="true" />
+          </div>
         </div>
       </section>
 

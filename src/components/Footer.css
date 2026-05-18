@@ -1,5 +1,5 @@
 .footer {
-  background: var(--navy);
+  background: var(--ink);
   color: rgba(255, 255, 255, 0.88);
   margin-top: auto;
 }
@@ -35,13 +35,8 @@
   margin-bottom: 1rem;
 }
 
-.footer__certs {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.65);
-}
-
-.footer__certs li {
-  margin-bottom: 0.35rem;
+.footer__brand .social-icons {
+  margin-top: 1.25rem;
 }
 
 .footer__links a,

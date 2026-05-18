@@ -3,9 +3,21 @@ export const institute = {
   shortName: 'LIAMS',
   tagline: 'Multidisciplinary. Innovation. Excellence.',
   certifications: [
-    'ISO 9001:2015',
-    'ISO 21001:2018',
-    'Registered under MSME, Government of India',
+    {
+      code: 'ISO 9001:2015',
+      label: 'Quality Management Systems',
+      icon: '✓',
+    },
+    {
+      code: 'ISO 21001:2018',
+      label: 'Educational Organizations Management',
+      icon: '✓',
+    },
+    {
+      code: 'MSME Registered',
+      label: 'Government of India — Ministry of MSME',
+      icon: '★',
+    },
   ],
   contact: {
     email: 'info@liams.edu.in',
@@ -14,6 +26,14 @@ export const institute = {
     hours: 'Monday – Friday, 9:00 AM – 5:00 PM',
   },
 };
+
+export const socialLinks = [
+  { name: 'Facebook', id: 'facebook', href: '#' },
+  { name: 'Instagram', id: 'instagram', href: '#' },
+  { name: 'LinkedIn', id: 'linkedin', href: '#' },
+  { name: 'WhatsApp', id: 'whatsapp', href: '#' },
+  { name: 'Twitter', id: 'twitter', href: '#' },
+];
 
 export const navLinks = [
   { path: '/', label: 'Home' },
@@ -56,6 +76,73 @@ export const coreServices = [
   },
 ];
 
+export const featuredEvents = [
+  {
+    id: 'iot-2026',
+    year: '2026',
+    day: '16',
+    month: 'March',
+    title:
+      'Short-Term Training Program On IoT Enabled Intelligent Imaging Systems With Generative AI',
+    description:
+      'Short-Term Training Program On IoT Enabled Intelligent Imaging Systems With Generative AI...',
+  },
+  {
+    id: 'sacoesium-2026',
+    year: '2026',
+    day: '25',
+    month: 'February',
+    title: 'SACOESIUM - 2026',
+    description:
+      "SACOESIUM 2026 — 24th National Level Students' Technical Symposium with competitions and workshops...",
+  },
+  {
+    id: 'iacmi-2026',
+    year: '2026',
+    day: '06',
+    month: 'February',
+    title: 'IACMI - 2026',
+    description:
+      'International Academic Conference on Multidisciplinary Innovation — call for papers open...',
+  },
+  {
+    id: 'ncmi-2026',
+    year: '2026',
+    day: '14',
+    month: 'August',
+    title: 'National Conference on Multidisciplinary Innovation',
+    description:
+      'A national platform for researchers and scholars to present multidisciplinary findings...',
+  },
+  {
+    id: 'isre-2026',
+    year: '2026',
+    day: '22',
+    month: 'November',
+    title: 'International Symposium on Research Excellence',
+    description:
+      'Hybrid international symposium featuring keynote sessions and peer-reviewed paper presentations...',
+  },
+  {
+    id: 'fdp-2026',
+    year: '2026',
+    day: '10',
+    month: 'June',
+    title: 'Faculty Development Program on Research Methodology',
+    description:
+      'Intensive FDP covering grant writing, publication strategies, and research ethics...',
+  },
+  {
+    id: 'ipr-2026',
+    year: '2026',
+    day: '05',
+    month: 'September',
+    title: 'Workshop on Intellectual Property Rights & Patents',
+    description:
+      'Hands-on workshop for faculty and scholars on IPR filing, patents, and commercialization...',
+  },
+];
+
 export const testimonials = [
   {
     quote:
@@ -77,6 +164,111 @@ export const testimonials = [
     author: 'Dr. James Mathew',
     role: 'Research Director',
     org: 'International Partner',
+  },
+  {
+    quote:
+      'The PhD support programme at LIAMS transformed our scholars\' thesis quality and submission readiness.',
+    author: 'Dr. Priya Sundaram',
+    role: 'Director of Research',
+    org: 'Affiliated College',
+  },
+  {
+    quote:
+      'Outstanding FDP sessions — our faculty gained practical skills in emerging pedagogy and assessment design.',
+    author: 'Prof. Michael D\'Souza',
+    role: 'Dean of Academics',
+    org: 'Engineering College',
+  },
+  {
+    quote:
+      'LIAMS conference proceedings meet international standards. A trusted organiser for academic symposia.',
+    author: 'Dr. Lakshmi Narayanan',
+    role: 'Conference Chair',
+    org: 'National University',
+  },
+  {
+    quote:
+      'Publication and indexing assistance from LIAMS accelerated our department\'s research visibility globally.',
+    author: 'Dr. Arun Chakraborty',
+    role: 'Head, Department of Science',
+    org: 'State University',
+  },
+  {
+    quote:
+      'Collaborative MoU with LIAMS opened doors for joint workshops and student exchange we had long envisioned.',
+    author: 'Prof. Helen Thomas',
+    role: 'International Relations',
+    org: 'Overseas Partner',
+  },
+  {
+    quote:
+      'Accreditation support was meticulous — documentation, benchmarks, and advisory at every stage.',
+    author: 'Dr. Suresh Babu',
+    role: 'IQAC Coordinator',
+    org: 'Autonomous Institution',
+  },
+  {
+    quote:
+      'The research innovation lab provides the mentorship and infrastructure our projects desperately needed.',
+    author: 'Dr. Meera Iyer',
+    role: 'Principal Investigator',
+    org: 'R&D Centre',
+  },
+  {
+    quote:
+      'Students who completed LIAMS internships consistently outperform peers in industry placements.',
+    author: 'Mr. Karthik Rajan',
+    role: 'HR Director',
+    org: 'Technology Firm',
+  },
+  {
+    quote:
+      'IPR consulting helped us file our first patent — clear guidance from concept to documentation.',
+    author: 'Dr. Fatima Hassan',
+    role: 'Innovation Lead',
+    org: 'Startup Incubator',
+  },
+  {
+    quote:
+      'Workshops on Generative AI and IoT were cutting-edge, well-structured, and immediately applicable.',
+    author: 'Prof. David Chen',
+    role: 'Head, Computer Science',
+    org: 'Technical Institute',
+  },
+  {
+    quote:
+      'LIAMS embodies the Loyola tradition of excellence while embracing modern multidisciplinary education.',
+    author: 'Fr. Administrator',
+    role: 'Academic Council',
+    org: 'Loyola Network',
+  },
+  {
+    quote:
+      'Knowledge-sharing initiatives created meaningful bridges between our institution and industry partners.',
+    author: 'Dr. Nandini Rao',
+    role: 'Director, Partnerships',
+    org: 'Business School',
+  },
+  {
+    quote:
+      'From proposal to viva, end-to-end PhD support was professional, timely, and deeply encouraging.',
+    author: 'Scholar Representative',
+    role: 'Doctoral Researcher',
+    org: 'LIAMS Programme',
+  },
+  {
+    quote:
+      'Short-term training programmes are industry-relevant and delivered by practitioners who know the field.',
+    author: 'Dr. George Kutty',
+    role: 'Training Coordinator',
+    org: 'Polytechnic College',
+  },
+  {
+    quote:
+      'We recommend LIAMS to any institution seeking quality, ISO-aligned academic and research services.',
+    author: 'Dr. Aparna Menon',
+    role: 'Vice Chancellor',
+    org: 'Partner University',
   },
 ];
 
@@ -149,20 +341,12 @@ export const researchServices = [
   },
 ];
 
-export const upcomingEvents = [
-  {
-    title: 'National Conference on Multidisciplinary Innovation',
-    date: 'August 2026',
-    venue: 'Chennai',
-    status: 'Upcoming',
-  },
-  {
-    title: 'International Symposium on Research Excellence',
-    date: 'November 2026',
-    venue: 'Hybrid',
-    status: 'Call for Papers Open',
-  },
-];
+export const upcomingEvents = featuredEvents.map((e) => ({
+  title: e.title,
+  date: `${e.day} ${e.month} ${e.year}`,
+  venue: 'Chennai',
+  status: 'Upcoming',
+}));
 
 export const collaborations = [
   {

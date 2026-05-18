@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { institute, navLinks } from '../data/siteData';
+import SocialIcons from './SocialIcons';
 import './Footer.css';
 
 export default function Footer() {
@@ -11,11 +12,7 @@ export default function Footer() {
         <div className="footer__brand">
           <img src="/logos/liams-logo-full.png" alt={institute.shortName} className="footer__logo" />
           <p className="footer__tagline">{institute.tagline}</p>
-          <ul className="footer__certs">
-            {institute.certifications.map((cert) => (
-              <li key={cert}>{cert}</li>
-            ))}
-          </ul>
+          <SocialIcons />
         </div>
 
         <div>
@@ -51,7 +48,6 @@ export default function Footer() {
           <p>
             &copy; {year} {institute.name}. All rights reserved.
           </p>
-          <p className="footer__note">Content placeholders — update with official institute details.</p>
         </div>
       </div>
     </footer>

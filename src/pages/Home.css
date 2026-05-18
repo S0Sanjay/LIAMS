@@ -1,5 +1,5 @@
 .hero {
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 45%, #1a5080 100%);
+  background: linear-gradient(160deg, var(--ink) 0%, var(--navy) 45%, var(--blue) 100%);
   color: var(--white);
   padding: 4rem 0 5rem;
   position: relative;
@@ -61,20 +61,6 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin: 1.75rem 0;
-}
-
-.hero__certs {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.65);
-}
-
-.hero__certs li {
-  margin-bottom: 0.25rem;
-}
-
-.hero__certs li::before {
-  content: '✓ ';
-  color: var(--green);
 }
 
 .hero__visual {
