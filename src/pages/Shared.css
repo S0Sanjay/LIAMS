@@ -1,0 +1,41 @@
+.content-block {
+  max-width: 800px;
+}
+
+.content-block h2 {
+  margin-bottom: 1rem;
+}
+
+.content-block p {
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+}
+
+.page-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.events-list {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.event-card__status {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  background: var(--green);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.service-detail {
+  border-top: 3px solid var(--gold);
+}
