@@ -1,34 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
 
+/* Modern Tech–Academy (B2: navy + gold CTA + blue links) */
 :root {
   --ink: #0f172a;
   --navy: #1e3a5f;
   --navy-light: #2563eb;
   --blue: #2563eb;
+  --blue-light: #3b82f6;
   --blue-soft: #dbeafe;
   --gold: #eab308;
   --gold-dark: #ca8a04;
-  --green: #10b981;
+  --gold-soft: #fef9c3;
   --mint: #10b981;
+  --mint-dark: #059669;
+  --mint-soft: #d1fae5;
+  --violet: #7c3aed;
+  --violet-soft: #ede9fe;
+  --cyan: #06b6d4;
+  --cyan-soft: #cffafe;
+  --orange: #f97316;
+  --orange-soft: #ffedd5;
   --white: #ffffff;
   --bg: #f1f5f9;
   --off-white: #f8fafc;
   --bg-alt: #e2e8f0;
   --border: #cbd5e1;
-  --gray-100: #eef1f5;
-  --gray-300: #c5cdd8;
+  --gray-100: #f1f5f9;
+  --gray-300: #cbd5e1;
   --gray-600: #64748b;
   --gray-800: #334155;
+  --text: #0f172a;
   --text-body: #334155;
   --text-muted: #64748b;
+  --text-inverse: #f8fafc;
   --shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
   --shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.12);
   --radius: 12px;
   --radius-sm: 8px;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Source Sans 3', system-ui, sans-serif;
-  --header-height: 80px;
-  --max-width: 1200px;
+  --header-height: 76px;
+  --max-width: 1280px;
   --transition: 0.25s ease;
 }
 
@@ -48,8 +60,8 @@ body {
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.65;
-  color: var(--gray-800);
-  background: var(--white);
+  color: var(--text-body);
+  background: var(--off-white);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -60,7 +72,7 @@ img {
 }
 
 a {
-  color: var(--navy);
+  color: var(--blue);
   text-decoration: none;
   transition: color var(--transition);
 }
@@ -74,7 +86,7 @@ h2,
 h3,
 h4 {
   font-family: var(--font-serif);
-  color: var(--navy);
+  color: var(--ink);
   line-height: 1.25;
   font-weight: 700;
 }
@@ -129,12 +141,12 @@ ul {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold-dark);
+  color: var(--blue);
   margin-bottom: 0.5rem;
 }
 
 .section__header p {
-  color: var(--gray-600);
+  color: var(--text-muted);
   font-size: 1.05rem;
 }
 
@@ -151,6 +163,7 @@ ul {
   border: 2px solid transparent;
   cursor: pointer;
   transition: all var(--transition);
+  white-space: nowrap;
 }
 
 .btn--primary {
@@ -172,8 +185,8 @@ ul {
 }
 
 .btn--secondary:hover {
-  background: var(--navy-light);
-  border-color: var(--navy-light);
+  background: var(--blue-light);
+  border-color: var(--blue-light);
   color: var(--white);
 }
 
@@ -185,18 +198,18 @@ ul {
 
 .btn--outline:hover {
   background: var(--white);
-  color: var(--navy);
+  color: var(--ink);
 }
 
 .btn--navy {
-  background: var(--navy);
+  background: var(--ink);
   color: var(--white);
-  border-color: var(--navy);
+  border-color: var(--ink);
 }
 
 .btn--navy:hover {
-  background: var(--navy-light);
-  border-color: var(--navy-light);
+  background: var(--navy);
+  border-color: var(--navy);
   color: var(--white);
 }
 
@@ -222,13 +235,14 @@ ul {
   border-radius: var(--radius);
   padding: 1.75rem;
   box-shadow: var(--shadow);
-  border: 1px solid var(--gray-100);
+  border: 1px solid var(--border);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
+  border-color: var(--blue-soft);
 }
 
 .card__icon {
@@ -238,10 +252,11 @@ ul {
 
 .card h3 {
   margin-bottom: 0.75rem;
+  color: var(--ink);
 }
 
 .card p {
-  color: var(--gray-600);
+  color: var(--text-muted);
   font-size: 0.95rem;
 }
 
@@ -250,11 +265,11 @@ ul {
   margin-top: 1rem;
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--gold-dark);
+  color: var(--blue);
 }
 
 .card__link:hover {
-  color: var(--navy);
+  color: var(--gold-dark);
 }
 
 .sr-only {

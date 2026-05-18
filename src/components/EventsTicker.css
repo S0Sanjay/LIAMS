@@ -111,7 +111,7 @@
   font-family: var(--font-sans);
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--blue);
+  color: var(--blue-light);
   margin-bottom: 0.35rem;
   line-height: 1.35;
 }

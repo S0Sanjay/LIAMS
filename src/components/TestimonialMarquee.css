@@ -37,8 +37,9 @@
 
 .marquee-card {
   flex: 0 0 340px;
-  background: var(--bg);
+  background: var(--white);
   border: 1px solid var(--border);
+  border-top: 3px solid var(--blue);
   border-radius: var(--radius);
   padding: 1.5rem;
   box-shadow: var(--shadow);

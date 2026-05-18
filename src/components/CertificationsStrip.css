@@ -36,6 +36,7 @@
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
   border-color: var(--blue);
+  border-left: 3px solid var(--gold);
 }
 
 .certs-strip__icon {

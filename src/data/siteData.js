@@ -37,12 +37,11 @@ export const socialLinks = [
 
 export const navLinks = [
   { path: '/', label: 'Home' },
-  { path: '/about', label: 'About Us' },
-  { path: '/training', label: 'Training & Development' },
-  { path: '/research', label: 'Research & Innovation' },
-  { path: '/events', label: 'Conferences & Events' },
+  { path: '/about', label: 'About' },
+  { path: '/training', label: 'Training' },
+  { path: '/research', label: 'Research' },
+  { path: '/events', label: 'Events' },
   { path: '/collaborations', label: 'Collaborations' },
-  { path: '/contact', label: 'Contact' },
 ];
 
 export const coreServices = [

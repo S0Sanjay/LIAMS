@@ -64,7 +64,7 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: var(--navy);
+  background: linear-gradient(135deg, var(--ink) 0%, var(--blue) 100%);
   color: var(--white);
   display: flex;
   align-items: center;
@@ -100,7 +100,7 @@
 
 .director-message__sign strong {
   display: block;
-  color: var(--navy);
+  color: var(--ink);
   font-family: var(--font-serif);
   font-size: 1.15rem;
 }
@@ -112,7 +112,7 @@
 
 .board-card__designation {
   font-weight: 600;
-  color: var(--navy);
+  color: var(--blue);
 }
 
 .board-card__field {

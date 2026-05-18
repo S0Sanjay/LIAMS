@@ -130,7 +130,7 @@
 }
 
 .cta-banner {
-  background: linear-gradient(90deg, var(--gold) 0%, var(--gold-dark) 100%);
+  background: linear-gradient(90deg, var(--ink) 0%, var(--navy) 50%, var(--blue) 100%);
   padding: 3.5rem 0;
 }
 
@@ -141,11 +141,12 @@
 
 .cta-banner h2 {
   margin-bottom: 0.75rem;
+  color: var(--white);
 }
 
 .cta-banner p {
   margin-bottom: 1.5rem;
-  color: var(--navy);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 @media (max-width: 900px) {
