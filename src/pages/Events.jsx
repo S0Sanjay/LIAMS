@@ -1,8 +1,16 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import { upcomingEvents } from '../data/siteData';
+import './Events.css';
 
 export default function Events() {
+  const [query, setQuery] = useState('');
+  const normalizedQuery = query.trim().toLowerCase();
+  const filteredEvents = upcomingEvents.filter((event) =>
+    event.title.toLowerCase().includes(normalizedQuery)
+  );
+
   return (
     <>
       <PageHero
@@ -17,8 +25,26 @@ export default function Events() {
             <span className="section__label">Upcoming</span>
             <h2>Upcoming Events</h2>
           </div>
+          <div className="events-search">
+            <label htmlFor="event-search">Search events</label>
+            <div className="events-search__control">
+              <span className="events-search__icon" aria-hidden="true">
+                🔍
+              </span>
+              <input
+                id="event-search"
+                type="search"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder="Search by event title"
+              />
+            </div>
+          </div>
+          {filteredEvents.length === 0 ? (
+            <p className="events-search__none">No matching events were found.</p>
+          ) : null}
           <div className="events-list">
-            {upcomingEvents.map(({ title, date, venue, status }) => (
+            {filteredEvents.map(({ title, date, venue, status }) => (
               <article key={title} className="card event-card">
                 <span className="event-card__status">{status}</span>
                 <h3>{title}</h3>

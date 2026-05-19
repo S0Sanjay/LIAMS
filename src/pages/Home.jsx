@@ -5,6 +5,12 @@ import EventsTicker from '../components/EventsTicker';
 import TestimonialMarquee from '../components/TestimonialMarquee';
 import './Home.css';
 
+const announcements = [
+  'Registration open for the Faculty Development Program on Research Methodology.',
+  'Call for papers: IACMI 2026 — submit abstracts by 20 May.',
+  'Workshop on Intellectual Property Rights & Patents scheduled for 5 September.',
+];
+
 export default function Home() {
   return (
     <>
@@ -33,6 +39,27 @@ export default function Home() {
               alt={`${institute.shortName} — ${institute.name}`}
               className="hero__logo"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="announcement-strip" aria-label="Latest announcement">
+        <div className="container announcement-strip__wrapper">
+          <div className="announcement-strip__viewport" aria-hidden="true">
+            <div className="announcement-strip__track">
+              {announcements.map((text, index) => (
+                <span key={index} className="announcement-strip__item">
+                  {text}
+                </span>
+              ))}
+            </div>
+            <div className="announcement-strip__track">
+              {announcements.map((text, index) => (
+                <span key={`duplicate-${index}`} className="announcement-strip__item">
+                  {text}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>

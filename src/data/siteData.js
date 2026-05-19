@@ -42,6 +42,7 @@ export const navLinks = [
   { path: '/research', label: 'Research' },
   { path: '/events', label: 'Events' },
   { path: '/collaborations', label: 'Collaborations' },
+  { path: '/contact', label: 'Contact' },
 ];
 
 export const coreServices = [
