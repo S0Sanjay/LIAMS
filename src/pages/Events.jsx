@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom';
+import EmptyState from '../components/EmptyState';
+import CertificationsStrip from '../components/CertificationsStrip';
 import PageHero from '../components/PageHero';
-import { upcomingEvents } from '../data/siteData';
+import PreviousEventsGallery from '../components/PreviousEventsGallery';
+import Reveal from '../components/motion/Reveal';
+import StaggerGrid from '../components/motion/StaggerGrid';
+import { useUpcomingEvents } from '../hooks/usePublicContent';
 import './Events.css';
 
 export default function Events() {
+  const { events, loading } = useUpcomingEvents();
+
   return (
     <>
       <PageHero
@@ -14,26 +21,57 @@ export default function Events() {
 
       <section className="section">
         <div className="container">
-          <div className="section__header">
+          <Reveal className="section__header">
             <span className="section__label">Upcoming</span>
             <h2>Upcoming Events</h2>
-          </div>
-          <div className="events-list">
-            {upcomingEvents.map(({ title, date, venue, status }) => (
-              <article key={title} className="card event-card">
-                <span className="event-card__status">{status}</span>
-                <h3>{title}</h3>
-                <p>
-                  <strong>Date:</strong> {date} &nbsp;|&nbsp; <strong>Venue:</strong> {venue}
-                </p>
-              </article>
-            ))}
-          </div>
+          </Reveal>
+          {loading ? (
+            <p className="events-gallery__empty">Loading events…</p>
+          ) : events.length === 0 ? (
+            <EmptyState message="No upcoming events" />
+          ) : (
+            <StaggerGrid className="events-list">
+              {events.map((event) => (
+                <article key={event.id} className="card event-card">
+                  <span className="event-card__status">Upcoming</span>
+                  <h3>{event.title}</h3>
+                  <p>
+                    <strong>Date:</strong> {event.dateLabel} &nbsp;|&nbsp;{' '}
+                    <strong>Venue:</strong> {event.venue}
+                  </p>
+                  {event.form_link && (
+                    <p>
+                      <a
+                        href={event.form_link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn btn--secondary"
+                        style={{ marginTop: '0.75rem', display: 'inline-block' }}
+                      >
+                        Register / Submit
+                      </a>
+                    </p>
+                  )}
+                </article>
+              ))}
+            </StaggerGrid>
+          )}
         </div>
       </section>
 
       <section className="section section--alt">
-        <div className="container content-block">
+        <div className="container">
+          <Reveal className="section__header">
+            <span className="section__label">Gallery</span>
+            <h2>Previous Events</h2>
+            <p>Highlights from conferences, workshops, and programmes hosted by LIAMS.</p>
+          </Reveal>
+          <PreviousEventsGallery />
+        </div>
+      </section>
+
+      <section className="section">
+        <Reveal className="container content-block">
           <h2>National / International Conferences</h2>
           <p>
             LIAMS organizes and co-hosts conferences that bring together researchers, faculty,
@@ -53,8 +91,10 @@ export default function Events() {
               Submit / Register for Events
             </Link>
           </p>
-        </div>
+        </Reveal>
       </section>
+
+      <CertificationsStrip />
     </>
   );
 }

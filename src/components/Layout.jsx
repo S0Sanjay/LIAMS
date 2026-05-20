@@ -1,7 +1,7 @@
-import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
+import PageTransition from './motion/PageTransition';
 import './Layout.css';
 
 export default function Layout() {
@@ -10,10 +10,9 @@ export default function Layout() {
       <ScrollToTop />
       <Header />
       <main className="layout__main">
-        <Outlet />
+        <PageTransition />
       </main>
       <Footer />
     </div>
   );
 }
-

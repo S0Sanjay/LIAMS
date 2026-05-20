@@ -1,0 +1,115 @@
+.announcement-strip {
+  background: linear-gradient(90deg, rgba(3, 33, 76, 0.95), rgba(11, 65, 128, 0.97));
+  color: var(--white);
+}
+
+.announcement-strip__inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem 1.25rem;
+  min-height: 2.75rem;
+  padding: 0.85rem 0;
+}
+
+.announcement-strip__label {
+  flex-shrink: 0;
+  padding-left: clamp(1.5rem, 5vw, 4rem);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1.2;
+}
+
+.announcement-strip__message {
+  margin: 0;
+  padding-right: clamp(1rem, 3vw, 2rem);
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.88);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.announcement-strip__viewport {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  padding-right: clamp(1rem, 3vw, 2rem);
+  mask-image: linear-gradient(
+    90deg,
+    #000 0%,
+    #000 calc(100% - 2rem),
+    transparent 100%
+  );
+}
+
+.announcement-strip__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 2.5rem;
+  white-space: nowrap;
+  will-change: transform;
+  animation: announcement-marquee 18s linear infinite;
+}
+
+.announcement-strip__viewport:hover .announcement-strip__track {
+  animation-play-state: paused;
+}
+
+.announcement-strip__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.announcement-strip__item::before {
+  content: '•';
+  color: var(--gold);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+@keyframes announcement-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (max-width: 720px) {
+  .announcement-strip__inner {
+    min-height: 2.5rem;
+    padding: 0.75rem 0;
+  }
+
+  .announcement-strip__track {
+    gap: 1.75rem;
+    animation-duration: 22s;
+  }
+
+  .announcement-strip__item,
+  .announcement-strip__message {
+    font-size: 0.9rem;
+  }
+
+  .announcement-strip__label {
+    font-size: 0.68rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announcement-strip__track {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}

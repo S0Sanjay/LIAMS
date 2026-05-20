@@ -36,7 +36,9 @@ export default function Header() {
 
         <nav className={`header__nav ${menuOpen ? 'is-open' : ''}`} aria-label="Main">
           <ul>
-            {navLinks.map(({ path, label }) => (
+            {navLinks
+              .filter((link) => link.path !== '/contact')
+              .map(({ path, label }) => (
               <li key={path}>
                 <NavLink
                   to={path}
@@ -50,7 +52,7 @@ export default function Header() {
             ))}
           </ul>
           <Link to="/contact" className="btn btn--primary header__cta" onClick={closeMenu}>
-            Get in Touch
+            Contact
           </Link>
         </nav>
       </div>

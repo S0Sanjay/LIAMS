@@ -1,31 +1,69 @@
-import { institute } from '../data/siteData';
+import EmptyState from './EmptyState';
+import Reveal from './motion/Reveal';
+import StaggerGrid from './motion/StaggerGrid';
+import { useCertifications } from '../hooks/usePublicContent';
+import { useCertificationsSectionTitle } from '../hooks/useSiteSettings';
+import { CERTIFICATIONS_SECTION_ID } from '../lib/siteSettingsKeys';
 import './CertificationsStrip.css';
 
 export default function CertificationsStrip() {
+  const { certifications, loading } = useCertifications();
+  const { sectionTitle } = useCertificationsSectionTitle();
+
   return (
-    <section className="certs-strip" aria-labelledby="certs-heading">
+    <section
+      id={CERTIFICATIONS_SECTION_ID}
+      className="certs-strip"
+      aria-labelledby="certs-heading"
+    >
       <div className="container">
-        <div className="certs-strip__header">
-          <span className="section__label">Accreditation & Quality</span>
-          <h2 id="certs-heading">Recognized Standards of Excellence</h2>
+        <Reveal className="certs-strip__header">
+          <span className="section__label">Recognition & quality</span>
+          <h2 id="certs-heading">{sectionTitle}</h2>
           <p>
-            LIAMS operates under internationally recognized quality frameworks, reinforcing our
-            commitment to academic integrity and continuous improvement.
+            Official documents and credentials published by LIAMS.
           </p>
-        </div>
-        <ul className="certs-strip__grid">
-          {institute.certifications.map((cert) => (
-            <li key={cert.code} className="certs-strip__card">
-              <span className="certs-strip__icon" aria-hidden="true">
-                {cert.icon}
-              </span>
-              <div>
-                <strong>{cert.code}</strong>
-                <span>{cert.label}</span>
-              </div>
-            </li>
-          ))}
-        </ul>
+        </Reveal>
+
+        {loading ? (
+          <p className="certs-strip__loading">Loading…</p>
+        ) : certifications.length === 0 ? (
+          <Reveal delay={0.05}>
+            <EmptyState message={`No ${sectionTitle.toLowerCase()} available yet`} />
+          </Reveal>
+        ) : (
+          <StaggerGrid className="certs-strip__grid">
+            {certifications.map((cert) => {
+              const inner = (
+                <>
+                  <span className="certs-strip__icon" aria-hidden="true">
+                    {cert.icon}
+                  </span>
+                  <div>
+                    <strong>{cert.title}</strong>
+                    <span>{cert.subtitle}</span>
+                  </div>
+                </>
+              );
+              return (
+                <div key={cert.id} className="certs-strip__card">
+                  {cert.drive_link ? (
+                    <a
+                      href={cert.drive_link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="certs-strip__link"
+                    >
+                      {inner}
+                    </a>
+                  ) : (
+                    inner
+                  )}
+                </div>
+              );
+            })}
+          </StaggerGrid>
+        )}
       </div>
     </section>
   );

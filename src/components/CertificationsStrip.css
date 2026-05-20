@@ -14,10 +14,27 @@
   color: var(--text-muted);
 }
 
+.certs-strip__loading {
+  text-align: center;
+  color: var(--text-muted);
+}
+
 .certs-strip__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.25rem;
+}
+
+.certs-strip__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: inherit;
+  width: 100%;
+}
+
+.certs-strip__link:hover {
+  color: var(--blue);
 }
 
 .certs-strip__card {
@@ -33,7 +50,7 @@
 }
 
 .certs-strip__card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px) scale(1.01);
   box-shadow: var(--shadow-lg);
   border-color: var(--blue);
   border-left: 3px solid var(--gold);

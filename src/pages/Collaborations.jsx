@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
+import Reveal from '../components/motion/Reveal';
+import StaggerGrid from '../components/motion/StaggerGrid';
 import { collaborations } from '../data/siteData';
 
 export default function Collaborations() {
@@ -13,19 +15,19 @@ export default function Collaborations() {
 
       <section className="section">
         <div className="container">
-          <div className="grid grid--3">
+          <StaggerGrid className="grid grid--3">
             {collaborations.map(({ title, description }) => (
               <article key={title} className="card">
                 <h3>{title}</h3>
                 <p>{description}</p>
               </article>
             ))}
-          </div>
-          <p className="page-cta">
+          </StaggerGrid>
+          <Reveal delay={0.1} className="page-cta">
             <Link to="/contact" className="btn btn--navy">
               Propose a Collaboration
             </Link>
-          </p>
+          </Reveal>
         </div>
       </section>
     </>

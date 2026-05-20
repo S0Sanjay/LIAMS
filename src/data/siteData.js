@@ -2,23 +2,6 @@ export const institute = {
   name: 'Loyola Institute of Advanced Multidisciplinary Studies',
   shortName: 'LIAMS',
   tagline: 'Empowering Multidisciplinary Research and Innovation & Academic Excellence.',
-  certifications: [
-    {
-      code: 'ISO 9001:2015',
-      label: 'Quality Management Systems',
-      icon: '✓',
-    },
-    {
-      code: 'ISO 21001:2018',
-      label: 'Educational Organizations Management',
-      icon: '✓',
-    },
-    {
-      code: 'MSME Registered',
-      label: 'Government of India — Ministry of MSME',
-      icon: '★',
-    },
-  ],
   contact: {
     email: 'info@liams.edu.in',
     phone: '+91 44 0000 0000',
@@ -73,73 +56,6 @@ export const coreServices = [
       'MoUs, accreditation and ranking support, and collaborative knowledge-sharing initiatives.',
     path: '/collaborations',
     icon: '🤝',
-  },
-];
-
-export const featuredEvents = [
-  {
-    id: 'iot-2026',
-    year: '2026',
-    day: '16',
-    month: 'March',
-    title:
-      'Short-Term Training Program On IoT Enabled Intelligent Imaging Systems With Generative AI',
-    description:
-      'Short-Term Training Program On IoT Enabled Intelligent Imaging Systems With Generative AI...',
-  },
-  {
-    id: 'sacoesium-2026',
-    year: '2026',
-    day: '25',
-    month: 'February',
-    title: 'SACOESIUM - 2026',
-    description:
-      "SACOESIUM 2026 — 24th National Level Students' Technical Symposium with competitions and workshops...",
-  },
-  {
-    id: 'iacmi-2026',
-    year: '2026',
-    day: '06',
-    month: 'February',
-    title: 'IACMI - 2026',
-    description:
-      'International Academic Conference on Multidisciplinary Innovation — call for papers open...',
-  },
-  {
-    id: 'ncmi-2026',
-    year: '2026',
-    day: '14',
-    month: 'August',
-    title: 'National Conference on Multidisciplinary Innovation',
-    description:
-      'A national platform for researchers and scholars to present multidisciplinary findings...',
-  },
-  {
-    id: 'isre-2026',
-    year: '2026',
-    day: '22',
-    month: 'November',
-    title: 'International Symposium on Research Excellence',
-    description:
-      'Hybrid international symposium featuring keynote sessions and peer-reviewed paper presentations...',
-  },
-  {
-    id: 'fdp-2026',
-    year: '2026',
-    day: '10',
-    month: 'June',
-    title: 'Faculty Development Program on Research Methodology',
-    description:
-      'Intensive FDP covering grant writing, publication strategies, and research ethics...',
-  },
-  {
-    id: 'ipr-2026',
-    year: '2026',
-    day: '05',
-    month: 'September',
-    title: 'Workshop on Intellectual Property Rights & Patents',
-    description:
-      'Hands-on workshop for faculty and scholars on IPR filing, patents, and commercialization...',
   },
 ];
 
@@ -347,13 +263,6 @@ export const researchServices = [
       'Consulting on patents, copyrights, and commercialization pathways for research outputs.',
   },
 ];
-
-export const upcomingEvents = featuredEvents.map((e) => ({
-  title: e.title,
-  date: `${e.day} ${e.month} ${e.year}`,
-  venue: 'Chennai',
-  status: 'Upcoming',
-}));
 
 export const collaborations = [
   {

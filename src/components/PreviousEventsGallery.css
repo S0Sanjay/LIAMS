@@ -1,0 +1,40 @@
+.events-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.events-gallery__item {
+  margin: 0;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.events-gallery__item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.events-gallery__item figcaption {
+  padding: 1rem;
+}
+
+.events-gallery__category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+}
+
+.events-gallery__empty {
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto;
+}

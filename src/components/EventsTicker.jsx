@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
-import { featuredEvents } from '../data/siteData';
+import EmptyState from './EmptyState';
+import Reveal from './motion/Reveal';
+import { useUpcomingEvents } from '../hooks/usePublicContent';
 import './EventsTicker.css';
 
 function EventCard({ event }) {
@@ -12,6 +14,7 @@ function EventCard({ event }) {
       </div>
       <div className="event-ticker__body">
         <h3>{event.title}</h3>
+        <p className="event-ticker__meta">{event.venue}</p>
         <p>{event.description}</p>
       </div>
     </article>
@@ -19,12 +22,13 @@ function EventCard({ event }) {
 }
 
 export default function EventsTicker() {
-  const items = [...featuredEvents, ...featuredEvents];
+  const { events, loading } = useUpcomingEvents();
+  const items = events.length ? [...events, ...events] : [];
 
   return (
     <section className="events-ticker-section section--alt">
       <div className="container events-ticker-section__layout">
-        <div className="events-ticker-section__intro">
+        <Reveal className="events-ticker-section__intro">
           <span className="section__label">Upcoming</span>
           <h2>Events</h2>
           <p>
@@ -33,19 +37,27 @@ export default function EventsTicker() {
           <Link to="/events" className="btn btn--secondary">
             View All Events
           </Link>
-        </div>
+        </Reveal>
 
-        <div className="events-ticker" aria-label="Upcoming events scrolling list">
-          <div className="events-ticker__fade events-ticker__fade--top" aria-hidden="true" />
-          <div className="events-ticker__viewport">
-            <div className="events-ticker__track">
-              {items.map((event, index) => (
-                <EventCard key={`${event.id}-${index}`} event={event} />
-              ))}
+        <Reveal delay={0.1} className="events-ticker-section__panel">
+          {loading ? (
+            <p className="events-ticker__status">Loading events…</p>
+          ) : events.length === 0 ? (
+            <EmptyState message="No upcoming events" />
+          ) : (
+            <div className="events-ticker" aria-label="Upcoming events scrolling list">
+              <div className="events-ticker__fade events-ticker__fade--top" aria-hidden="true" />
+              <div className="events-ticker__viewport">
+                <div className="events-ticker__track">
+                  {items.map((event, index) => (
+                    <EventCard key={`${event.id}-${index}`} event={event} />
+                  ))}
+                </div>
+              </div>
+              <div className="events-ticker__fade events-ticker__fade--bottom" aria-hidden="true" />
             </div>
-          </div>
-          <div className="events-ticker__fade events-ticker__fade--bottom" aria-hidden="true" />
-        </div>
+          )}
+        </Reveal>
       </div>
     </section>
   );

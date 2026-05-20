@@ -1,22 +1,25 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { institute, coreServices } from '../data/siteData';
-import CertificationsStrip from '../components/CertificationsStrip';
+import AnnouncementStrip from '../components/AnnouncementStrip';
+import CertificatesFloatingButton from '../components/CertificatesFloatingButton';
 import EventsTicker from '../components/EventsTicker';
 import TestimonialMarquee from '../components/TestimonialMarquee';
+import Reveal from '../components/motion/Reveal';
+import StaggerGrid from '../components/motion/StaggerGrid';
 import './Home.css';
-
-const announcements = [
-  'Registration open for the Faculty Development Program on Research Methodology.',
-  'Call for papers: IACMI 2026 — submit abstracts by 20 May.',
-  'Workshop on Intellectual Property Rights & Patents scheduled for 5 September.',
-];
 
 export default function Home() {
   return (
     <>
       <section className="hero">
         <div className="container hero__grid">
-          <div className="hero__content">
+          <motion.div
+            className="hero__content"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+          >
             <span className="hero__badge">Welcome to {institute.shortName}</span>
             <h1>{institute.name}</h1>
             <p className="hero__tagline">{institute.tagline}</p>
@@ -34,43 +37,27 @@ export default function Home() {
                 Contact Us
               </Link>
             </div>
-          </div>
-          <div className="hero__visual">
+          </motion.div>
+          <motion.div
+            className="hero__visual"
+            initial={{ opacity: 0, scale: 0.94 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+          >
             <img
               src="/logos/liams-logo-full.png"
               alt={`${institute.shortName} — ${institute.name}`}
               className="hero__logo"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      <section className="announcement-strip" aria-label="Latest announcement">
-        <div className="container announcement-strip__wrapper">
-          <div className="announcement-strip__viewport" aria-hidden="true">
-            <div className="announcement-strip__track">
-              {announcements.map((text, index) => (
-                <span key={index} className="announcement-strip__item">
-                  {text}
-                </span>
-              ))}
-            </div>
-            <div className="announcement-strip__track">
-              {announcements.map((text, index) => (
-                <span key={`duplicate-${index}`} className="announcement-strip__item">
-                  {text}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <CertificationsStrip />
+      <AnnouncementStrip />
 
       <section className="section">
         <div className="container">
-          <div className="section__header">
+          <Reveal className="section__header">
             <span className="section__label">Introduction</span>
             <h2>Welcome to the Loyola Institute of Advanced Multidisciplinary Studies</h2>
             <p>
@@ -79,8 +66,8 @@ export default function Home() {
               rigorous academic frameworks, we provide comprehensive support for students,
               scholars, and academicians globally.
             </p>
-          </div>
-          <div className="home-offers">
+          </Reveal>
+          <Reveal delay={0.08} className="home-offers">
             <h3>What do we offer?</h3>
             <ul>
               <li>Institutional Collaborations: Accreditation and ranking support, Memoranda of Understanding (MoU), and collaborative knowledge-sharing activities.</li>
@@ -90,34 +77,34 @@ export default function Home() {
               <li>Publication Assistance: Manuscript audit, Journal targeting, SCI/Scopus/Web of Science/UGC care list publications, ISBN & ISSN indexing.</li>
               <li>Research & Innovation Lab: Conduct high-level simulations, data analysis, and technical modelling across diverse engineering and scientific domains.</li>
             </ul>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="section section--alt">
         <div className="container">
-          <div className="section__header">
+          <Reveal className="section__header">
             <span className="section__label">Core Services</span>
             <h2>What We Offer</h2>
             <p>
               Comprehensive academic and institutional services across training, research,
               events, and collaborations.
             </p>
-          </div>
-          <div className="grid grid--4">
+          </Reveal>
+          <StaggerGrid className="grid grid--4 home-article-grid">
             {coreServices.map(({ title, description, path, icon }) => (
-              <article key={title} className="card">
+              <article key={title} className="card article-card">
                 <div className="card__icon" aria-hidden="true">
                   {icon}
                 </div>
                 <h3>{title}</h3>
-                <p>{description}</p>
+                <p className="article-card__text">{description}</p>
                 <Link to={path} className="card__link">
                   Learn more →
                 </Link>
               </article>
             ))}
-          </div>
+          </StaggerGrid>
         </div>
       </section>
 
@@ -126,7 +113,7 @@ export default function Home() {
       <TestimonialMarquee />
 
       <section className="cta-banner">
-        <div className="container cta-banner__inner">
+        <Reveal className="container cta-banner__inner">
           <h2>Partner With LIAMS</h2>
           <p>
             Explore collaborations, training programmes, and research support tailored to your
@@ -135,8 +122,10 @@ export default function Home() {
           <Link to="/contact" className="btn btn--primary">
             Start a Conversation
           </Link>
-        </div>
+        </Reveal>
       </section>
+
+      <CertificatesFloatingButton />
     </>
   );
 }
