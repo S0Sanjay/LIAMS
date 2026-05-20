@@ -67,17 +67,6 @@ export default function Home() {
               scholars, and academicians globally.
             </p>
           </Reveal>
-          <Reveal delay={0.08} className="home-offers">
-            <h3>What do we offer?</h3>
-            <ul>
-              <li>Institutional Collaborations: Accreditation and ranking support, Memoranda of Understanding (MoU), and collaborative knowledge-sharing activities.</li>
-              <li>Research & Innovation: End-to-end guidance from conceptualization to thesis defence, IPR consulting services, patent drafting, and copyright registrations.</li>
-              <li>Training & Development: Industry-oriented training for students and job seekers with advanced software packages, E-Vehicle design, embedded design, Thermal Analysis, Renewable Energy Technology; High-impact Faculty Development Programs (FDPs) and Industry-Oriented internships.</li>
-              <li>Conferences & Academic Events: Organizing premier National & International Conferences, Workshops, Hackathons, and Short-term training for students and faculty members.</li>
-              <li>Publication Assistance: Manuscript audit, Journal targeting, SCI/Scopus/Web of Science/UGC care list publications, ISBN & ISSN indexing.</li>
-              <li>Research & Innovation Lab: Conduct high-level simulations, data analysis, and technical modelling across diverse engineering and scientific domains.</li>
-            </ul>
-          </Reveal>
         </div>
       </section>
 
@@ -91,7 +80,7 @@ export default function Home() {
               events, and collaborations.
             </p>
           </Reveal>
-          <StaggerGrid className="grid grid--4 home-article-grid">
+          <StaggerGrid className="grid grid--3 home-article-grid">
             {coreServices.map(({ title, description, path, icon }) => (
               <article key={title} className="card article-card">
                 <div className="card__icon" aria-hidden="true">

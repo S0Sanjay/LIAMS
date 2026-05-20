@@ -99,6 +99,22 @@
   color: var(--gray-600);
 }
 
+.home-article-grid {
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+}
+
+@media (max-width: 1100px) {
+  .home-article-grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .home-article-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .testimonial {
   display: flex;
   flex-direction: column;

@@ -30,32 +30,46 @@ export const navLinks = [
 
 export const coreServices = [
   {
-    title: 'Training & Development',
+    title: 'Institutional Collaborations',
     description:
-      'Industry-oriented internships, faculty development programs, and hands-on workshops aligned with emerging disciplines.',
-    path: '/training',
-    icon: '🎓',
+      'Accreditation and ranking support, Memoranda of Understanding (MoU), and collaborative knowledge-sharing activities.',
+    path: '/collaborations',
+    icon: '🤝',
   },
   {
     title: 'Research & Innovation',
     description:
-      'Dedicated research lab support, end-to-end PhD guidance, publication assistance, and IPR consulting.',
+      'End-to-end guidance from conceptualization to thesis defence. IPR consulting services, patent drafting, and copyright registrations.',
     path: '/research',
     icon: '🔬',
   },
   {
-    title: 'Conferences & Events',
+    title: 'Training & Development',
     description:
-      'National and international conferences with peer-reviewed proceedings and knowledge-exchange platforms.',
+      'Industry-oriented training for students and job seekers with advanced software packages, E-Vehicle design, embedded design, Thermal Analysis, Renewable Energy Technology; high-impact FDPs and industry-oriented internships.',
+    path: '/training',
+    icon: '🎓',
+  },
+  {
+    title: 'Conferences & Academic Events',
+    description:
+      'Organizing premier National & International Conferences, Workshops, Hackathons, and short-term training for students and faculty members.',
     path: '/events',
     icon: '📅',
   },
   {
-    title: 'Institutional Collaborations',
+    title: 'Publication Assistance',
     description:
-      'MoUs, accreditation and ranking support, and collaborative knowledge-sharing initiatives.',
-    path: '/collaborations',
-    icon: '🤝',
+      'Manuscript audit, journal targeting, SCI/Scopus/Web of Science/UGC care list publications, and ISBN/ISSN indexing support.',
+    path: '/research',
+    icon: '📚',
+  },
+  {
+    title: 'Research & Innovation Lab',
+    description:
+      'Conduct high-level simulations, data analysis, and technical modelling across diverse engineering and scientific domains.',
+    path: '/research',
+    icon: '🧪',
   },
 ];
 
