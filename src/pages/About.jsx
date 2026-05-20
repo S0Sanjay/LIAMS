@@ -15,7 +15,7 @@ export default function About() {
       <PageHero
         label="About Us"
         title="About LIAMS"
-        subtitle={institute.name}
+        subtitle="Pioneering the Future of Multidisciplinary Education and Research"
       />
 
       <section className="section">
@@ -43,9 +43,10 @@ export default function About() {
             <span className="section__label">Institute</span>
             <h2>Who We Are</h2>
             <p className="lead">
-              LIAMS stands at the intersection of tradition and innovation — advancing
-              multidisciplinary education, research excellence, and industry collaboration under
-              internationally recognized quality standards.
+              Loyola Institute of Research and Development is an MSME-registered institution dedicated
+              to advancing engineering, science, and management studies. Guided by rigorous
+              ISO 9001:2015 and 21001:2018 quality standards, we operate as a catalyst for educational
+              excellence and applied research.
             </p>
           </div>
           <div className="about-symbol">
@@ -97,24 +98,43 @@ export default function About() {
           </div>
           <article className="director-message card">
             <p>
-              Welcome to the Loyola Institute of Advanced Multidisciplinary Studies. At LIAMS,
-              we believe that the greatest breakthroughs occur at the intersection of disciplines
-              — where engineering meets humanities, where innovation meets ethics, and where
-              education meets industry.
+              Welcome to the Loyola Institute of Advanced Multidisciplinary Studies.
+              In today’s rapidly evolving global landscape, the most profound breakthroughs
+              and sustainable solutions occur at the intersection of diverse disciplines.
+              As we navigate an era defined by rapid technological advancements—from Artificial
+              Intelligence and Machine Learning to smart infrastructures and advanced analytics—
+              it is no longer sufficient to operate within traditional academic silos.
             </p>
             <p>
-              Our institute is committed to nurturing scholars, faculty, and professionals who
-              are equipped to lead in a rapidly evolving world. Through our ISO-certified quality
-              frameworks, we ensure that every programme, partnership, and research initiative
-              meets the highest standards of excellence.
+              At the Loyola Institute, our founding philosophy is rooted in multidisciplinary
+              synergy. We have established this institution to serve as a dynamic nexus where
+              engineering, arts, science, and management converge. Our goal is not just to impart
+              knowledge, but to actively bridge the gap between academic research and real-world
+              industrial applications.
             </p>
             <p>
-              I invite you to explore our services, connect with our team, and join us in
-              building a future defined by multidisciplinary learning and transformative impact.
+              As ISO 9001:2015 and 21001:2018-certified and MSME-registered institutions, we are
+              deeply committed to maintaining the highest standards of quality in everything we do.
+              Whether it is providing rigorous, industry-oriented internships for students,
+              organizing high-impact Faculty Development Programs for educators, or offering
+              end-to-end PhD and publication support for dedicated research scholars, our ecosystem
+              is designed to empower your academic and professional journey.
+            </p>
+            <p>
+              We take immense pride in our state-of-the-art Research and Innovation Lab and our
+              robust global network. Through our national and international conferences, MoUs,
+              and collaborative knowledge-sharing initiatives, we aim to elevate institutional
+              standards and foster a rich culture of intellectual property creation and scholarly
+              excellence across SCI, SCOPUS, and Web of Science platforms.
+            </p>
+            <p>
+              Whether you are a student looking to upskill, a researcher striving for publication
+              excellence, or an institution seeking strategic collaboration and accreditation
+              support, you will find a dedicated partner in us.
             </p>
             <footer className="director-message__sign">
-              <strong>Director, LIAMS</strong>
-              <span>Loyola Institute of Advanced Multidisciplinary Studies</span>
+              <strong>Dr. T. Lurthu Pushparaj, B.Sc., M.Sc., Ph.D.</strong>
+              <span>Director, Loyola Institute of Advanced Multidisciplinary Studies</span>
             </footer>
           </article>
         </div>

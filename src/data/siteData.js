@@ -1,7 +1,7 @@
 export const institute = {
   name: 'Loyola Institute of Advanced Multidisciplinary Studies',
   shortName: 'LIAMS',
-  tagline: 'Multidisciplinary. Innovation. Excellence.',
+  tagline: 'Empowering Multidisciplinary Research and Innovation & Academic Excellence.',
   certifications: [
     {
       code: 'ISO 9001:2015',
@@ -273,18 +273,15 @@ export const testimonials = [
 ];
 
 export const vision =
-  'To be a globally recognized centre of excellence in advanced multidisciplinary education, research, and innovation that transforms learners into leaders of positive change.';
+  'To emerge as a global nexus for multidisciplinary innovation, empowering scholars, educators, and institutions to achieve the highest standards of academic and technical excellence.';
 
 export const mission =
-  'To deliver quality academic programmes, industry-aligned training, and cutting-edge research support through collaborative partnerships, ethical practice, and continuous improvement in line with international standards.';
+  'To cultivate a robust research culture by providing state-of-the-art infrastructure and publication support; to bridge the industry-academia divide through targeted training, workshops, and expert-led internships; and to facilitate global knowledge exchange through world-class conferences and institutional collaborations.';
 
 export const objectives = [
-  'Promote interdisciplinary learning across science, technology, humanities, and management.',
-  'Strengthen industry–academia partnerships through internships and collaborative projects.',
-  'Support faculty and scholar development through structured training and mentorship.',
-  'Advance research output, publications, and intellectual property creation.',
-  'Facilitate national and international academic conferences and knowledge networks.',
-  'Maintain quality management systems certified to ISO 9001:2015 and ISO 21001:2018.',
+  'Academic Knowledge Dissemination & Skill Building: organize global academic events, deliver industry-oriented internships, and run faculty development programmes and short-term training.',
+  'Research, Innovation & Intellectual Property: provide end-to-end research mentorship, publication assistance for SCI/SCOPUS/Web of Science/UGC CARE listings, IPR consulting, and access to advanced research infrastructure.',
+  'Institutional Growth & Strategic Collaboration: build strategic alliances and MoUs, and support institutions with accreditation, ranking, and quality enhancement frameworks.',
 ];
 
 export const leadership = [
@@ -294,10 +291,20 @@ export const leadership = [
 ];
 
 export const advisoryBoard = [
-  { name: 'Prof. Advisory Member I', designation: 'Emeritus Professor', field: 'Multidisciplinary Studies' },
-  { name: 'Dr. Advisory Member II', designation: 'Industry Expert', field: 'Technology & Innovation' },
-  { name: 'Dr. Advisory Member III', designation: 'Research Consultant', field: 'Publications & IPR' },
-  { name: 'Prof. Advisory Member IV', designation: 'Academic Advisor', field: 'Quality & Accreditation' },
+  { name: 'Dr. M. Balaji, M.E., Ph.D.', designation: 'Professor, SSN College of Engineering, Chennai', field: 'Academic Research Leadership' },
+  { name: 'Dr. S. Vidhya, M.E., Ph.D.', designation: 'Assistant Professor, SRM Institute of Science and Technology, Chennai', field: 'Engineering Education' },
+  { name: 'Dr. M. Appadurai, M.E., Ph.D.', designation: 'Associate Professor, Head of Mechanical Engg., Nehru College of Engineering & Research Centre, Kerala', field: 'Mechanical Engineering' },
+  { name: 'Dr. E. Fantin Irudaya Raj, M.E., Ph.D.', designation: 'Associate Professor, Department of EEE, Dr. Sivanthi Aditanar College of Engineering', field: 'Electrical Engineering' },
+  { name: 'Dr. M. Augustine, M.E., Ph.D.', designation: 'Associate Professor, Loyola ICAM College of Engineering and Technology, Chennai', field: 'Academic Quality & Innovation' },
+  { name: 'Dr. A. Infantraj, M.E., Ph.D.', designation: 'Director, Infintin Mobility Solutions Pvt Ltd., Chennai', field: 'Industry Collaboration' },
+  { name: 'Mr. S. Dinesh, B.E., M.E.', designation: 'Co-founder, Welkinrim Technologies, Chennai', field: 'Technology Entrepreneurship' },
+  { name: 'Mr. Mahesh Sekar, B.Com., MBA, ACS', designation: 'Company Secretary, Information & Technology Department, Tamil Nadu Arasu Cable TV Corporation Ltd.', field: 'Governance & Operations' },
+  { name: 'Dr. Antony Samrat', designation: 'Academic Advisor', field: 'Research Strategy' },
+  { name: 'Mr. Prince', designation: 'Industry Advisor', field: 'Innovation Partnerships' },
+  { name: 'Dr. Premkumar', designation: 'Academic Advisor', field: 'Collaborative Research' },
+  { name: 'Dr. Sajeev Kamoj', designation: 'Academic Advisor', field: 'Research Leadership' },
+  { name: 'Dr. Subathra', designation: 'Academic Advisor', field: 'Educational Excellence' },
+  { name: 'Dr. Rajalakshmanan', designation: 'Academic Advisor', field: 'Institutional Collaboration' },
 ];
 
 export const trainingPrograms = [

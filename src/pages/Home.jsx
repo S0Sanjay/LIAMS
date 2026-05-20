@@ -21,8 +21,10 @@ export default function Home() {
             <h1>{institute.name}</h1>
             <p className="hero__tagline">{institute.tagline}</p>
             <p className="hero__intro">
-              A centre of excellence advancing multidisciplinary education, industry-aligned
-              training, and research innovation for scholars, faculty, and institutional partners.
+              Welcome to the Loyola Institute of Advanced Multidisciplinary Studies. We are a dynamic
+              academic and research ecosystem designed to bridge the gap between academia and industry.
+              By integrating modern technological trends with rigorous academic frameworks, we provide
+              comprehensive support for students, scholars, and academicians globally.
             </p>
             <div className="hero__actions">
               <Link to="/about" className="btn btn--primary">
@@ -70,12 +72,24 @@ export default function Home() {
         <div className="container">
           <div className="section__header">
             <span className="section__label">Introduction</span>
-            <h2>Advancing Knowledge Across Disciplines</h2>
+            <h2>Welcome to the Loyola Institute of Advanced Multidisciplinary Studies</h2>
             <p>
-              Loyola Institute of Advanced Multidisciplinary Studies (LIAMS) integrates
-              traditional academic rigour with modern technology, engineering, and research
-              practice — preparing scholars and professionals for a dynamic global landscape.
+              We are a dynamic academic and research ecosystem designed to bridge the gap
+              between academia and industry. By integrating modern technological trends with
+              rigorous academic frameworks, we provide comprehensive support for students,
+              scholars, and academicians globally.
             </p>
+          </div>
+          <div className="home-offers">
+            <h3>What do we offer?</h3>
+            <ul>
+              <li>Institutional Collaborations: Accreditation and ranking support, Memoranda of Understanding (MoU), and collaborative knowledge-sharing activities.</li>
+              <li>Research & Innovation: End-to-end guidance from conceptualization to thesis defence, IPR consulting services, patent drafting, and copyright registrations.</li>
+              <li>Training & Development: Industry-oriented training for students and job seekers with advanced software packages, E-Vehicle design, embedded design, Thermal Analysis, Renewable Energy Technology; High-impact Faculty Development Programs (FDPs) and Industry-Oriented internships.</li>
+              <li>Conferences & Academic Events: Organizing premier National & International Conferences, Workshops, Hackathons, and Short-term training for students and faculty members.</li>
+              <li>Publication Assistance: Manuscript audit, Journal targeting, SCI/Scopus/Web of Science/UGC care list publications, ISBN & ISSN indexing.</li>
+              <li>Research & Innovation Lab: Conduct high-level simulations, data analysis, and technical modelling across diverse engineering and scientific domains.</li>
+            </ul>
           </div>
         </div>
       </section>
